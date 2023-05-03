@@ -1,3 +1,4 @@
+import { NavigationContainer } from '@react-navigation/native'
 import React from 'react'
 import {
   SafeAreaView,
@@ -25,18 +26,20 @@ function App () {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <ScrollView
-        contentInsetAdjustmentBehavior='automatic'
-        style={backgroundStyle}
-      >
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white
-          }}
+      <NavigationContainer>
+        <ScrollView
+          contentInsetAdjustmentBehavior='automatic'
+          style={backgroundStyle}
         >
-          <Text style={{ color: 'black' }}>COUCOU</Text>
-        </View>
-      </ScrollView>
+          <View
+            style={{
+              backgroundColor: isDarkMode ? Colors.black : Colors.white
+            }}
+          >
+            <Text style={{ color: 'black' }}>COUCOU</Text>
+          </View>
+        </ScrollView>
+      </NavigationContainer>
     </SafeAreaView>
   )
 }
