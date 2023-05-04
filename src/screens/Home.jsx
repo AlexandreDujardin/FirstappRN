@@ -6,7 +6,7 @@ function Home ({ navigation }) {
       <Text>HOME SCREEN</Text>
       <Button
         title='Aller au profile'
-        onPress={() => navigation.navigate('Profile')}
+        onPress={() => navigation.navigate('ProfileStack')}
       />
     </View>
   )
